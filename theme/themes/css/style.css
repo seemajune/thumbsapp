@@ -1,9 +1,11 @@
 
+@import url(http://fonts.googleapis.com/css?family=Quicksand);
+@import url(http://fonts.googleapis.com/css?family=The+Girl+Next+Door);
 
-body{ background:#a5d2da; padding:0; color: #454545; font-family: "Myriad Pro";}
+body{ background:#a5d2da; padding:0; color: #454545; font-family: "Quicksand";}
 a,a:hover{text-decoration:none; color:#FE5214}
 h2,h3{color:#FE5214; text-rendering: optimizelegibility; }
-h1{padding:0px; font-weight: 200;font-size: 32px;color: #3f3f3f;margin: 0;font-family: "Myriad Pro";text-rendering: optimizelegibility;}
+h1{padding:0px; font-weight: 200;font-size: 32px;color: #3f3f3f;margin: 0;font-family: "Quicksand";text-rendering: optimizelegibility;}
 .debug{ border:1px solid #FFCC33;}
 h1.brand {
     background: none repeat scroll 0 0 #299A0B ;
@@ -20,7 +22,15 @@ h1.brand {
 }
 
 .span3.logo {
-    padding: 34px 0 0;
+    padding: 30px 0 0;
+}
+
+.span3.logo a {
+  font-family: 'The Girl Next Door', cursive;
+  color: #FFFD0D;
+  font-size: 3em;
+  text-align: center;
+
 }
 
 .clr{clear:both}
@@ -28,36 +38,51 @@ h1.brand {
 .navbar{margin-bottom:-1px; margin-top:28px; position:relative }
 .navbar .nav, .navbar .nav > li{float:none; text-align:right; margin-left:25px;}
 .nav li{display:inline-block; float:none;}
-.nav a {padding: 3px 18px;font-size: 23px; display: inline-block; color:#3a494c; font-family: "Myriad Pro";}
+.nav a {padding: 3px 18px;font-size: 23px; display: inline-block; color:#3a494c; font-family: "Quicksand";}
 
- #portfolioSection, #ourServices, #blogSection{padding:70px 0 ; }
+ #movieSection, #moreMovieSection, #ourServices, #blogSection{padding:70px 0 ; }
 .txtR{text-align:right}
 
-#ourServices{background: #fff;text-align: center;border-top: 1px solid #ddd;}
+#ourServices{background: #a5d2da;text-align: center;border-top: 1px solid #ddd;}
 #ourServices h4 {
     margin:25px 0;
+    font-family: "Quicksand";
+    font-weight: bolder;
 }
 
 #ourServices p {
     color: #5E5E5E;
     font-size: 19px;
     line-height: 27px;
+    font-family: "Quicksand";
 }
 
-
-
-#portfolioSection{background: #99d4a5;text-align: center;}
-#portfolioSection h1{ text-transform:uppercase; color:#fff; padding:0;font-size:60px;}
-#portfolioSection p {
+#movieSection{background: #99d4a5;text-align: center;}
+#movieSection h1{ text-transform:uppercase; color:#fff; padding:0;font-size:60px;}
+#movieSection p {
     color: #fff;
     font-size: 19px;
     line-height: 27px;
 	margin: 15px 0;
+    font-family: "Quicksand";
 }
-#portfolioSection .span6, #contactSection .span6{ float:none; margin:0 auto; text-align:center;}
-#portfolioSection .thumbnails > li{margin-left: 60px; margin-bottom:60px;}
-#portfolioSection .thumbnails > li.span4{ width:350px;}
+#movieSection .span6 { float:none; margin:0 auto; text-align:center;}
+#movieSection .thumbnails > li{margin-left: 60px; margin-bottom:60px;}
+#movieSection .thumbnails > li.span4{ width:350px;}
 
+
+#moreMovieSection{background: #99d4a5;text-align: center;}
+#moreMovieSection h1{ text-transform:uppercase; color:#fff; padding:0;font-size:60px;}
+#moreMovieSection p {
+    color: #fff;
+    font-size: 19px;
+    line-height: 27px;
+    margin: 15px 0;
+    font-family: "Quicksand";
+}
+#moreMovieSection .span6, .second-movie-page { float:none; margin:0 auto; text-align:center;}
+#moreMovieSection .thumbnails > li{margin-left: 60px; margin-bottom:60px;}
+#moreMovieSection .thumbnails > li.span4{ width:350px;}
 
 
 #blogSection{background: #fff;}
@@ -72,6 +97,7 @@ h1.brand {
     font-size: 22px;
     line-height: 27px;
 	margin:20px 0;
+    font-family: "Quicksand";
 }
 
 #meetourteamSection  p {
@@ -79,13 +105,17 @@ h1.brand {
     font-size: 19px;
     line-height: 27px;
 	margin: 15px 0;
+    font-family: "Quicksand";
 }
 
 #meetourteamSection h4 {
     font-size: 37px;line-height: 40px; margin:10px 0;
+    font-family: "Quicksand";
+    font-weight: bolder;
 }
 #meetourteamSection h5 {
     font-size: 23px;
+    font-family: "Quicksand";
 }
 #meetourteamSection .span6, #contactSection .span6{ float:none; margin:0 auto; text-align:center;}
 #meetourteamSection .thumbnails > li{margin-left: 60px; margin-bottom:60px;}
@@ -142,7 +172,7 @@ h1.brand {
 .blockDtl:hover{color:#FE5214}
 #shadow{ min-height:44px; padding:18px 0; text-align:center}
 
-#carouselSection{ margin:0 auto;  padding: 38px 0 31px; color:#eee;}
+#carouselSection{ margin:0 auto;  padding: 60px 0 31px; color:#eee;}
 #carouselSection #myCarousel{margin-bottom:0}
 #myCarousel .carousel .item {-webkit-transition: opacity 3s; -moz-transition: opacity 3s; -ms-transition: opacity 3s; -o-transition: opacity 3s; transition: opacity 3s;}
 #myCarousel .carousel .active.left {left:0;opacity:0;z-index:2;}

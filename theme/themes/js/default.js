@@ -22,8 +22,6 @@
         $(".btn-navbar").click();
    	});
 
-
-
 	// Show/Hide Sticky "Go top" button
 	$(window).scroll(function(){
 		if($(this).scrollTop()>200){
