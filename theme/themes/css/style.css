@@ -43,9 +43,9 @@ h1.brand {
  #movieSection, #moreMovieSection, #ourServices, #blogSection{padding:70px 0 ; }
 .txtR{text-align:right}
 
-#ourServices{background: #a5d2da;text-align: center;border-top: 1px solid #ddd;}
+#ourServices{background: #a5d2da;text-align: center;border-top: 1px solid #FFFD0D;}
 #ourServices h4 {
-    margin:25px 0;
+    margin: 35px 0;
     font-family: "Quicksand";
     font-weight: bolder;
 }
@@ -55,6 +55,12 @@ h1.brand {
     font-size: 19px;
     line-height: 27px;
     font-family: "Quicksand";
+
+}
+
+#ourServices img {
+
+    padding: 25%;
 }
 
 #movieSection{background: #99d4a5;text-align: center;}
