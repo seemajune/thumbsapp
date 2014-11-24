@@ -35,8 +35,8 @@
   </div>
   </div>
 
-  <% all_movies.in_theaters.each_with_index do |in_theaters, index| %>
-  <%= in_theaters.name %> 
+  <% @in_theaters.each_with_index do |movie, index| %>
+  <%= movie.name %> 
   <% end %>
 <!-- ========================== END HEADER ================================================ -->
 
