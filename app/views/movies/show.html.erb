@@ -1,1 +1,6 @@
 <%= @movie.title %>
+<ol>
+  <% @movie.movie_reviews.each do |review| %>
+    <li><%= review.quote %></li>
+    <% end %>
+</ol>
