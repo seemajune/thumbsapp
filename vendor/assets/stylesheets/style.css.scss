@@ -1,19 +1,4 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
 
- *= require_self
- *= require_tree .
- */
 @import url(http://fonts.googleapis.com/css?family=Quicksand);
 @import url(http://fonts.googleapis.com/css?family=The+Girl+Next+Door);
 
@@ -27,7 +12,7 @@ h1.brand {
     border-radius: 86% 86% 86% 86%;
     box-shadow: 0 0 4px #000000;
     color: #FFFFFF;
-    font-size: 41px;
+    font-size: 2em;
     height: 100px;
     line-height: 81px;
     margin: -87px auto 0;
@@ -67,7 +52,7 @@ h1.brand {
 
 #ourServices p {
     color: #5E5E5E;
-    font-size: 19px;
+    font-size: 1em;
     line-height: 27px;
     font-family: "Quicksand";
 
@@ -79,7 +64,7 @@ h1.brand {
 }
 
 #movieSection{background: #99d4a5;text-align: center;}
-#movieSection h1{ text-transform:uppercase; color:#fff; padding:0;font-size:60px;}
+#movieSection h1{ text-transform:uppercase; color:#fff; padding:0;font-size:50px;}
 #movieSection p {
     color: #fff;
     font-size: 19px;
@@ -87,13 +72,14 @@ h1.brand {
   margin: 15px 0;
     font-family: "Quicksand";
 }
+
 #movieSection .span6 { float:none; margin:0 auto; text-align:center;}
 #movieSection .thumbnails > li{margin-left: 60px; margin-bottom:60px;}
 #movieSection .thumbnails > li.span4{ width:350px;}
 
 
 #moreMovieSection{background: #99d4a5;text-align: center;}
-#moreMovieSection h1{ text-transform:uppercase; color:#fff; padding:0;font-size:60px;}
+#moreMovieSection h1{ text-transform:uppercase; color:#fff; padding:0;font-size:50px;}
 #moreMovieSection p {
     color: #fff;
     font-size: 19px;
@@ -112,7 +98,7 @@ h1.brand {
 
 
 #meetourteamSection{ padding:70px 0 ; background:#ddb3c2;  text-align: center; }
-#meetourteamSection h1{ text-transform:uppercase; color:#fff; padding:0; font-size:60px;}
+#meetourteamSection h1{ text-transform:uppercase; color:#fff; padding:0; font-size:50px;}
 #meetourteamSection .thumbnails  p {
     color: #909090;
     font-size: 22px;
@@ -147,7 +133,7 @@ h1.brand {
 
 
 #recentpostSection{ padding:70px 0 ; background:#b5d5e1;  text-align: center; }
-#recentpostSection h1{ text-transform:uppercase; color:#fff; padding:0; font-size:60px;}
+#recentpostSection h1{ text-transform:uppercase; color:#fff; padding:0; font-size:50px;}
 #recentpostSection .thumbnails  p {
     color: #909090;
     font-size: 22px;
@@ -177,7 +163,7 @@ h1.brand {
 
 #contactSection{ background:#3b3b3b; text-align:center; padding:70px 0 0;}
 #contactSection .span8{ float:none; margin:0 auto;}
-#contactSection h1{ text-transform:uppercase; color:#fff; padding:0;font-size:60px;}
+#contactSection h1{ text-transform:uppercase; color:#fff; padding:0;font-size:50px;}
 #contactSection p {
     color: #fff;
     font-size: 19px;
