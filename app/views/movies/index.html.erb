@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <!-- <head>
     <meta charset="utf-8">
     <title>thumbs app</title>
@@ -39,30 +38,31 @@
 
 <!-- ========================= BEGIN SERVICES SECTION ======================================== -->
 <div id="ourServices">  
-<div class="container"> 
-        <div class="row">              
-                <div class="row-fluid">
-      <div class="span4">
-      
+  <div class="container"> 
+    <div class="row">              
+      <div class="row-fluid">
+  <div class="span4">
       <div class="info-img">
         <%= image_tag "graph.png" %>
       </div>
         <h4>Sentiment Analysis</h4>
         <p>No time to read 1,000 reviews? No worries. We're here to help you. </p>
-      </div>
+  </div>
       <div class="span4">
         <div class="info-img"><%= image_tag "bubbles.png" %>
-        </div>
+      </div>
         <h4>Natural Language Processing</h4>
          <p>to deliver most accurate sentiment analytics of movie reviews.</p>
+  </div>
+
+    <div class="span4">
+      <div class="info-img"><%= image_tag "cinema.png" %>
       </div>
-      <div class="span4">
-        <div class="info-img"><%= image_tag "cinema.png" %>
-        </div>
-        <h4>Movie Reviews</h4>
-         <p>a quick & easy way to decipher most recent critics' reviews. </p>
-      </div>
-    </div>  
+      <h4>Movie Reviews</h4>
+      <p>a quick & easy way to decipher most recent critics' reviews. </p>
+    </div>
+  </div>  
+</div>
 </div>
 </div>
 </div>
@@ -93,7 +93,7 @@
     </li>
     -->
     <% @movies.each do |movie| %>
-    <li class="span4">
+    <li class="span3">
       <div class="thumbnail">
         <div class="blockDtl">
         <%= link_to image_tag(movie.poster, alt: movie.title), movie %>
@@ -421,4 +421,3 @@
     <!-- Placed at the end of the document so the pages load faster -->
 
 
-</html>
