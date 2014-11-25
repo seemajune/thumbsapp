@@ -6,11 +6,11 @@ class Movie < ActiveRecord::Base
     bf = BadFruit.new('hk73sdh9btjw5w9t6m2cws9p')
     in_theaters = bf.lists.in_theaters
     in_theaters.each do |m|
-      movie = Movie.new(:title => m.name)
+      poster = get_poster(m.posters.thumbnail)
+      movie = Movie.new(:title => m.name, :poster => poster)
         #binding.pry
         begin
           m.reviews.each do |r|
-            # binding.pry
             movie.movie_reviews.build(:quote => r.quote)
           end
         rescue
@@ -18,6 +18,10 @@ class Movie < ActiveRecord::Base
         end
       movie.save
     end
+  end
+
+  def self.get_poster(filename)
+    filename.gsub('tmb', 'det')
   end
 
 end

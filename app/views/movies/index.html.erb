@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<!-- <head>
     <meta charset="utf-8">
     <title>thumbs app</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
   <link id="callCss" rel="stylesheet" href="..stylesheets/bootstrap.min.css" type="text/css" media="screen" charset="utf-8" />
   <link id="callCss"rel="stylesheet" href="..stylesheets/application.css" type="text/css" media="screen" charset="utf-8" />
   <link href="..stylesheets/bootstrap-responsive.min.css" rel="stylesheet">
-</head>
+</head> -->
   <div id="headerSection">
   <div class="container">
   <div class="span3 logo"><a href="#">thumbs app</a></div>
@@ -74,11 +74,6 @@
 </div>
 <div class="container"> 
 <div class="container"> 
-    <ul>
-  <% @movies.each do |movie| %>
-  <li><%= link_to movie.title, movie %></li>
-    <% end %>
-</ul>
   <ul class="nav nav-pills">
   <li class="active"><a href="#all" data-toggle="tab">1</a></li>
     <li><a href="#moreMovies" data-toggle="tab">2</a></li>
@@ -88,22 +83,23 @@
 
   <div class="tab-pane active" id="all">
   <ul class="thumbnails">
-  
-    <li class="span4">
+
+   <!-- <li class="span4">
       <div class="thumbnail">
         <div class="blockDtl">
         <a href="#myModal1" role="button"  data-toggle="modal"><img src="..images/img-4.png" alt=""></a>
         </div>
       </div>
     </li>
+    -->
+    <% @movies.each do |movie| %>
     <li class="span4">
       <div class="thumbnail">
         <div class="blockDtl">
-        <a href="#"><img src="..images/img-5.png" alt=""></a>
-        </div>
+        <%= link_to image_tag(movie.poster, alt: movie.title), movie %>
       </div>
     </li>
-    <li class="span4">
+  <!--  <li class="span4">
       <div class="thumbnail">
         <div class="blockDtl">
         <a href="#"><img src="..images/img-6.png" alt=""></a>
@@ -290,7 +286,9 @@
         <a href="#"><img src="..images/img-9.png" alt=""></a>
         </div>
       </div>
-    </li>   
+    </li> 
+    -->
+    <% end %>  
   </ul>   
   </div>
 </div>
