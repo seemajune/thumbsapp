@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 3) do
+ActiveRecord::Schema.define(version: 4) do
 
   create_table "movie_reviews", force: true do |t|
     t.text     "quote"
@@ -25,6 +25,13 @@ ActiveRecord::Schema.define(version: 3) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "poster"
+  end
+
+  create_table "sentiments", force: true do |t|
+    t.decimal  "score"
+    t.integer  "movie_review_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

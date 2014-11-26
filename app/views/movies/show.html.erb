@@ -1,6 +1,9 @@
 <%= @movie.title %>
 <ol>
-  <% @movie.movie_reviews.each do |review| %>
+  <% @reviews.each do |review| %>
     <li><%= review.quote %></li>
+    Sentiment value: <%= review.sentiment.score.to_f + 1 %>
     <% end %>
 </ol>
+
+
