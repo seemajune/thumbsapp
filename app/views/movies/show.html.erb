@@ -1,3 +1,4 @@
+
 <div class="container-fluid row white-bg">
     <div id="sentiment">
       <%= pie_chart @movie.sentiments.group(:score).having("count(score) > 0").count %>
