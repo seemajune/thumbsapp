@@ -6,10 +6,11 @@ class MoviesController < ApplicationController
   end
 
   def show
+    @movies = Movie.all
     @movie = Movie.find(params[:id])
     @reviews = @movie.movie_reviews
     @reviews.each {|review| review.find_or_create_sentiment}
-  end
 
+  end
 
 end

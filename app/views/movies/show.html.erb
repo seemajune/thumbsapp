@@ -1,9 +1,19 @@
-<%= @movie.title %>
-<ol>
+<div class="container-fluid row white-bg">
+    <div id="sentiment">
+      <%= pie_chart @movie.sentiments.group(:score).having("count(score) > 0").count %>
+    </div>
+  <div class="movies-show-bg span12"><h2 class="movie-title-h2 text-center"><%= @movie.title %></h2>
+  <div class="border-movies">
   <% @reviews.each do |review| %>
-    <li><%= review.quote %></li>
-    Sentiment value: <%= review.sentiment.score.to_f + 1 %>
-    <% end %>
-</ol>
+  <ul class="bullet-less">
+      <li><%= review.quote %></li>
 
+    <ul>
+      <li>Sentiment value: <%= review.sentiment.score.to_f %></li>
+    </ul>
+  </ul>
+     <% end %>
+    </div>
+  </div>
+</div>
 

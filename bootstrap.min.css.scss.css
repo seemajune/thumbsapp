@@ -83,6 +83,10 @@ textarea {
 	overflow:auto;
 	vertical-align:top
 }
+
+#chart-2 {
+	font-weight: bolder;
+}
 .clearfix {
 *zoom:1
 }

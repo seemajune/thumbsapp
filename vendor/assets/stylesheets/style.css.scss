@@ -25,6 +25,44 @@ h1.brand {
     padding: 30px 0 0;
 }
 
+#sentiment {
+  display: inline-block;
+  width: 100%;
+  padding-top: 5%;
+
+}
+
+.white-bg {
+  background-color: #fff;  
+  padding-left: 10%;
+  padding-top: 5%;  
+}
+
+.movie-title-h2 {
+  font-family: "Quicksand";
+  font-weight: bolder;
+  color: #6cdbc2;
+  padding-bottom: 10%;
+  font-size: 4em;
+}
+
+.border-movies {
+    border: 1px solid #555;
+    border-radius: 10px;
+    padding: 10%;
+    padding-bottom: 15%;
+    overflow: scroll;
+    height: 300px;
+    width: 100%;
+}
+
+.bullet-less {
+     list-style: none;
+}
+.movies-show-bg {
+  background-color: #fff;
+  display: inline-block;
+}
 .span3.logo a {
   font-family: 'The Girl Next Door', cursive;
   color: #FFFD0D;
@@ -51,10 +89,10 @@ h1.brand {
 }
 
 #ourServices p {
-    color: #5E5E5E;
-    font-size: 1em;
-    line-height: 27px;
-    font-family: "Quicksand";
+   color: #5E5E5E;
+   font-size: 1em;
+   line-height: 27px;
+   font-family: "Quicksand";
 
 }
 
@@ -81,7 +119,7 @@ h1.brand {
 #moreMovieSection{background: #99d4a5;text-align: center;}
 #moreMovieSection h1{ text-transform:uppercase; color:#fff; padding:0;font-size:50px;}
 #moreMovieSection p {
-    color: #fff;
+    color:  #fff;
     font-size: 19px;
     line-height: 27px;
     margin: 15px 0;
