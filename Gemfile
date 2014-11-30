@@ -29,12 +29,12 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
-
 gem 'stanford-core-nlp'
 gem 'badfruit'
-
+gem 'treat'
 gem 'chartkick'
 ruby '2.0.0', :engine => 'jruby', :engine_version => '1.7.16'
+
 #gem 'puma'
 
 # Use ActiveModel has_secure_password

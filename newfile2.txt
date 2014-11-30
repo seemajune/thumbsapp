@@ -1,0 +1,1079 @@
+Sentence #1 (8 tokens):
+It's an elaborate game of hurry-up-and-wait.
+[Text=It CharacterOffsetBegin=0 CharacterOffsetEnd=2 PartOfSpeech=PRP] [Text='s CharacterOffsetBegin=2 CharacterOffsetEnd=4 PartOfSpeech=VBZ] [Text=an CharacterOffsetBegin=5 CharacterOffsetEnd=7 PartOfSpeech=DT] [Text=elaborate CharacterOffsetBegin=8 CharacterOffsetEnd=17 PartOfSpeech=JJ] [Text=game CharacterOffsetBegin=18 CharacterOffsetEnd=22 PartOfSpeech=NN] [Text=of CharacterOffsetBegin=23 CharacterOffsetEnd=25 PartOfSpeech=IN] [Text=hurry-up-and-wait CharacterOffsetBegin=26 CharacterOffsetEnd=43 PartOfSpeech=NN] [Text=. CharacterOffsetBegin=43 CharacterOffsetEnd=44 PartOfSpeech=.] 
+(ROOT
+  (S
+    (NP (PRP It))
+    (VP (VBZ 's)
+      (NP
+        (NP (DT an) (JJ elaborate) (NN game))
+        (PP (IN of)
+          (NP (NN hurry-up-and-wait)))))
+    (. .)))
+
+root(ROOT-0, game-5)
+nsubj(game-5, It-1)
+cop(game-5, 's-2)
+det(game-5, an-3)
+amod(game-5, elaborate-4)
+prep_of(game-5, hurry-up-and-wait-7)
+
+Sentence #2 (23 tokens):
+And it's the most shameless example yet of splitting the final book in a hugely popular series into two film adaptations.
+[Text=And CharacterOffsetBegin=45 CharacterOffsetEnd=48 PartOfSpeech=CC] [Text=it CharacterOffsetBegin=49 CharacterOffsetEnd=51 PartOfSpeech=PRP] [Text='s CharacterOffsetBegin=51 CharacterOffsetEnd=53 PartOfSpeech=VBZ] [Text=the CharacterOffsetBegin=54 CharacterOffsetEnd=57 PartOfSpeech=DT] [Text=most CharacterOffsetBegin=58 CharacterOffsetEnd=62 PartOfSpeech=RBS] [Text=shameless CharacterOffsetBegin=63 CharacterOffsetEnd=72 PartOfSpeech=JJ] [Text=example CharacterOffsetBegin=73 CharacterOffsetEnd=80 PartOfSpeech=NN] [Text=yet CharacterOffsetBegin=81 CharacterOffsetEnd=84 PartOfSpeech=RB] [Text=of CharacterOffsetBegin=85 CharacterOffsetEnd=87 PartOfSpeech=IN] [Text=splitting CharacterOffsetBegin=88 CharacterOffsetEnd=97 PartOfSpeech=VBG] [Text=the CharacterOffsetBegin=98 CharacterOffsetEnd=101 PartOfSpeech=DT] [Text=final CharacterOffsetBegin=102 CharacterOffsetEnd=107 PartOfSpeech=JJ] [Text=book CharacterOffsetBegin=108 CharacterOffsetEnd=112 PartOfSpeech=NN] [Text=in CharacterOffsetBegin=113 CharacterOffsetEnd=115 PartOfSpeech=IN] [Text=a CharacterOffsetBegin=116 CharacterOffsetEnd=117 PartOfSpeech=DT] [Text=hugely CharacterOffsetBegin=118 CharacterOffsetEnd=124 PartOfSpeech=RB] [Text=popular CharacterOffsetBegin=125 CharacterOffsetEnd=132 PartOfSpeech=JJ] [Text=series CharacterOffsetBegin=133 CharacterOffsetEnd=139 PartOfSpeech=NN] [Text=into CharacterOffsetBegin=140 CharacterOffsetEnd=144 PartOfSpeech=IN] [Text=two CharacterOffsetBegin=145 CharacterOffsetEnd=148 PartOfSpeech=CD] [Text=film CharacterOffsetBegin=149 CharacterOffsetEnd=153 PartOfSpeech=NN] [Text=adaptations CharacterOffsetBegin=154 CharacterOffsetEnd=165 PartOfSpeech=NNS] [Text=. CharacterOffsetBegin=165 CharacterOffsetEnd=166 PartOfSpeech=.] 
+(ROOT
+  (S (CC And)
+    (NP (PRP it))
+    (VP (VBZ 's)
+      (NP
+        (NP (DT the)
+          (ADJP (RBS most) (JJ shameless))
+          (NN example) (RB yet))
+        (PP (IN of)
+          (S
+            (VP (VBG splitting)
+              (NP
+                (NP (DT the) (JJ final) (NN book))
+                (PP (IN in)
+                  (NP (DT a)
+                    (ADJP (RB hugely) (JJ popular))
+                    (NN series))))
+              (PP (IN into)
+                (NP (CD two) (NN film) (NNS adaptations))))))))
+    (. .)))
+
+root(ROOT-0, example-7)
+cc(example-7, And-1)
+nsubj(example-7, it-2)
+cop(example-7, 's-3)
+det(example-7, the-4)
+advmod(shameless-6, most-5)
+amod(example-7, shameless-6)
+advmod(example-7, yet-8)
+prepc_of(example-7, splitting-10)
+det(book-13, the-11)
+amod(book-13, final-12)
+dobj(splitting-10, book-13)
+det(series-18, a-15)
+advmod(popular-17, hugely-16)
+amod(series-18, popular-17)
+prep_in(book-13, series-18)
+num(adaptations-22, two-20)
+nn(adaptations-22, film-21)
+prep_into(splitting-10, adaptations-22)
+
+{
+  "sentences": [
+    {
+      "index": "0",
+      "parse": "(ROOT\n  (S\n    (NP (PRP It))\n    (VP (VBZ \'s)\n      (NP\n        (NP (DT an) (JJ elaborate) (NN game))\n        (PP (IN of)\n          (NP (NN hurry-up-and-wait)))))\n    (. .)))\n\n",
+      "basic-dependencies": [
+        {
+          "dep": "ROOT",
+          "governor": "0",
+          "governorGloss": "ROOT",
+          "dependent": "5",
+          "dependentGloss": "game"
+        },
+        {
+          "dep": "nsubj",
+          "governor": "5",
+          "governorGloss": "game",
+          "dependent": "1",
+          "dependentGloss": "It"
+        },
+        {
+          "dep": "cop",
+          "governor": "5",
+          "governorGloss": "game",
+          "dependent": "2",
+          "dependentGloss": "\'s"
+        },
+        {
+          "dep": "det",
+          "governor": "5",
+          "governorGloss": "game",
+          "dependent": "3",
+          "dependentGloss": "an"
+        },
+        {
+          "dep": "amod",
+          "governor": "5",
+          "governorGloss": "game",
+          "dependent": "4",
+          "dependentGloss": "elaborate"
+        },
+        {
+          "dep": "prep",
+          "governor": "5",
+          "governorGloss": "game",
+          "dependent": "6",
+          "dependentGloss": "of"
+        },
+        {
+          "dep": "pobj",
+          "governor": "6",
+          "governorGloss": "of",
+          "dependent": "7",
+          "dependentGloss": "hurry-up-and-wait"
+        }
+      ],
+      "collapsed-dependencies": [
+        {
+          "dep": "ROOT",
+          "governor": "0",
+          "governorGloss": "ROOT",
+          "dependent": "5",
+          "dependentGloss": "game"
+        },
+        {
+          "dep": "nsubj",
+          "governor": "5",
+          "governorGloss": "game",
+          "dependent": "1",
+          "dependentGloss": "It"
+        },
+        {
+          "dep": "cop",
+          "governor": "5",
+          "governorGloss": "game",
+          "dependent": "2",
+          "dependentGloss": "\'s"
+        },
+        {
+          "dep": "det",
+          "governor": "5",
+          "governorGloss": "game",
+          "dependent": "3",
+          "dependentGloss": "an"
+        },
+        {
+          "dep": "amod",
+          "governor": "5",
+          "governorGloss": "game",
+          "dependent": "4",
+          "dependentGloss": "elaborate"
+        },
+        {
+          "dep": "prep_of",
+          "governor": "5",
+          "governorGloss": "game",
+          "dependent": "7",
+          "dependentGloss": "hurry-up-and-wait"
+        }
+      ],
+      "collapsed-ccprocessed-dependencies": [
+        {
+          "dep": "ROOT",
+          "governor": "0",
+          "governorGloss": "ROOT",
+          "dependent": "5",
+          "dependentGloss": "game"
+        },
+        {
+          "dep": "nsubj",
+          "governor": "5",
+          "governorGloss": "game",
+          "dependent": "1",
+          "dependentGloss": "It"
+        },
+        {
+          "dep": "cop",
+          "governor": "5",
+          "governorGloss": "game",
+          "dependent": "2",
+          "dependentGloss": "\'s"
+        },
+        {
+          "dep": "det",
+          "governor": "5",
+          "governorGloss": "game",
+          "dependent": "3",
+          "dependentGloss": "an"
+        },
+        {
+          "dep": "amod",
+          "governor": "5",
+          "governorGloss": "game",
+          "dependent": "4",
+          "dependentGloss": "elaborate"
+        },
+        {
+          "dep": "prep_of",
+          "governor": "5",
+          "governorGloss": "game",
+          "dependent": "7",
+          "dependentGloss": "hurry-up-and-wait"
+        }
+      ],
+      "tokens": [
+        {
+          "index": "-1",
+          "word": "It",
+          "characterOffsetBegin": "0",
+          "characterOffsetEnd": "2",
+          "pos": "PRP"
+        },
+        {
+          "index": "-1",
+          "word": "\'s",
+          "characterOffsetBegin": "2",
+          "characterOffsetEnd": "4",
+          "pos": "VBZ"
+        },
+        {
+          "index": "-1",
+          "word": "an",
+          "characterOffsetBegin": "5",
+          "characterOffsetEnd": "7",
+          "pos": "DT"
+        },
+        {
+          "index": "-1",
+          "word": "elaborate",
+          "characterOffsetBegin": "8",
+          "characterOffsetEnd": "17",
+          "pos": "JJ"
+        },
+        {
+          "index": "-1",
+          "word": "game",
+          "characterOffsetBegin": "18",
+          "characterOffsetEnd": "22",
+          "pos": "NN"
+        },
+        {
+          "index": "-1",
+          "word": "of",
+          "characterOffsetBegin": "23",
+          "characterOffsetEnd": "25",
+          "pos": "IN"
+        },
+        {
+          "index": "-1",
+          "word": "hurry-up-and-wait",
+          "characterOffsetBegin": "26",
+          "characterOffsetEnd": "43",
+          "pos": "NN"
+        },
+        {
+          "index": "-1",
+          "word": ".",
+          "characterOffsetBegin": "43",
+          "characterOffsetEnd": "44",
+          "pos": "."
+        },
+        {
+          "index": "-1",
+          "word": "And",
+          "characterOffsetBegin": "45",
+          "characterOffsetEnd": "48",
+          "pos": "CC"
+        },
+        {
+          "index": "-1",
+          "word": "it",
+          "characterOffsetBegin": "49",
+          "characterOffsetEnd": "51",
+          "pos": "PRP"
+        },
+        {
+          "index": "-1",
+          "word": "\'s",
+          "characterOffsetBegin": "51",
+          "characterOffsetEnd": "53",
+          "pos": "VBZ"
+        },
+        {
+          "index": "-1",
+          "word": "the",
+          "characterOffsetBegin": "54",
+          "characterOffsetEnd": "57",
+          "pos": "DT"
+        },
+        {
+          "index": "-1",
+          "word": "most",
+          "characterOffsetBegin": "58",
+          "characterOffsetEnd": "62",
+          "pos": "RBS"
+        },
+        {
+          "index": "-1",
+          "word": "shameless",
+          "characterOffsetBegin": "63",
+          "characterOffsetEnd": "72",
+          "pos": "JJ"
+        },
+        {
+          "index": "-1",
+          "word": "example",
+          "characterOffsetBegin": "73",
+          "characterOffsetEnd": "80",
+          "pos": "NN"
+        },
+        {
+          "index": "-1",
+          "word": "yet",
+          "characterOffsetBegin": "81",
+          "characterOffsetEnd": "84",
+          "pos": "RB"
+        },
+        {
+          "index": "-1",
+          "word": "of",
+          "characterOffsetBegin": "85",
+          "characterOffsetEnd": "87",
+          "pos": "IN"
+        },
+        {
+          "index": "-1",
+          "word": "splitting",
+          "characterOffsetBegin": "88",
+          "characterOffsetEnd": "97",
+          "pos": "VBG"
+        },
+        {
+          "index": "-1",
+          "word": "the",
+          "characterOffsetBegin": "98",
+          "characterOffsetEnd": "101",
+          "pos": "DT"
+        },
+        {
+          "index": "-1",
+          "word": "final",
+          "characterOffsetBegin": "102",
+          "characterOffsetEnd": "107",
+          "pos": "JJ"
+        },
+        {
+          "index": "-1",
+          "word": "book",
+          "characterOffsetBegin": "108",
+          "characterOffsetEnd": "112",
+          "pos": "NN"
+        },
+        {
+          "index": "-1",
+          "word": "in",
+          "characterOffsetBegin": "113",
+          "characterOffsetEnd": "115",
+          "pos": "IN"
+        },
+        {
+          "index": "-1",
+          "word": "a",
+          "characterOffsetBegin": "116",
+          "characterOffsetEnd": "117",
+          "pos": "DT"
+        },
+        {
+          "index": "-1",
+          "word": "hugely",
+          "characterOffsetBegin": "118",
+          "characterOffsetEnd": "124",
+          "pos": "RB"
+        },
+        {
+          "index": "-1",
+          "word": "popular",
+          "characterOffsetBegin": "125",
+          "characterOffsetEnd": "132",
+          "pos": "JJ"
+        },
+        {
+          "index": "-1",
+          "word": "series",
+          "characterOffsetBegin": "133",
+          "characterOffsetEnd": "139",
+          "pos": "NN"
+        },
+        {
+          "index": "-1",
+          "word": "into",
+          "characterOffsetBegin": "140",
+          "characterOffsetEnd": "144",
+          "pos": "IN"
+        },
+        {
+          "index": "-1",
+          "word": "two",
+          "characterOffsetBegin": "145",
+          "characterOffsetEnd": "148",
+          "pos": "CD"
+        },
+        {
+          "index": "-1",
+          "word": "film",
+          "characterOffsetBegin": "149",
+          "characterOffsetEnd": "153",
+          "pos": "NN"
+        },
+        {
+          "index": "-1",
+          "word": "adaptations",
+          "characterOffsetBegin": "154",
+          "characterOffsetEnd": "165",
+          "pos": "NNS"
+        },
+        {
+          "index": "-1",
+          "word": ".",
+          "characterOffsetBegin": "165",
+          "characterOffsetEnd": "166",
+          "pos": "."
+        }
+      ]
+    },
+    {
+      "index": "1",
+      "parse": "(ROOT\n  (S (CC And)\n    (NP (PRP it))\n    (VP (VBZ \'s)\n      (NP\n        (NP (DT the)\n          (ADJP (RBS most) (JJ shameless))\n          (NN example) (RB yet))\n        (PP (IN of)\n          (S\n            (VP (VBG splitting)\n              (NP\n                (NP (DT the) (JJ final) (NN book))\n                (PP (IN in)\n                  (NP (DT a)\n                    (ADJP (RB hugely) (JJ popular))\n                    (NN series))))\n              (PP (IN into)\n                (NP (CD two) (NN film) (NNS adaptations))))))))\n    (. .)))\n\n",
+      "basic-dependencies": [
+        {
+          "dep": "ROOT",
+          "governor": "0",
+          "governorGloss": "ROOT",
+          "dependent": "7",
+          "dependentGloss": "example"
+        },
+        {
+          "dep": "cc",
+          "governor": "7",
+          "governorGloss": "example",
+          "dependent": "1",
+          "dependentGloss": "And"
+        },
+        {
+          "dep": "nsubj",
+          "governor": "7",
+          "governorGloss": "example",
+          "dependent": "2",
+          "dependentGloss": "it"
+        },
+        {
+          "dep": "cop",
+          "governor": "7",
+          "governorGloss": "example",
+          "dependent": "3",
+          "dependentGloss": "\'s"
+        },
+        {
+          "dep": "det",
+          "governor": "7",
+          "governorGloss": "example",
+          "dependent": "4",
+          "dependentGloss": "the"
+        },
+        {
+          "dep": "advmod",
+          "governor": "6",
+          "governorGloss": "shameless",
+          "dependent": "5",
+          "dependentGloss": "most"
+        },
+        {
+          "dep": "amod",
+          "governor": "7",
+          "governorGloss": "example",
+          "dependent": "6",
+          "dependentGloss": "shameless"
+        },
+        {
+          "dep": "advmod",
+          "governor": "7",
+          "governorGloss": "example",
+          "dependent": "8",
+          "dependentGloss": "yet"
+        },
+        {
+          "dep": "prep",
+          "governor": "7",
+          "governorGloss": "example",
+          "dependent": "9",
+          "dependentGloss": "of"
+        },
+        {
+          "dep": "pcomp",
+          "governor": "9",
+          "governorGloss": "of",
+          "dependent": "10",
+          "dependentGloss": "splitting"
+        },
+        {
+          "dep": "det",
+          "governor": "13",
+          "governorGloss": "book",
+          "dependent": "11",
+          "dependentGloss": "the"
+        },
+        {
+          "dep": "amod",
+          "governor": "13",
+          "governorGloss": "book",
+          "dependent": "12",
+          "dependentGloss": "final"
+        },
+        {
+          "dep": "dobj",
+          "governor": "10",
+          "governorGloss": "splitting",
+          "dependent": "13",
+          "dependentGloss": "book"
+        },
+        {
+          "dep": "prep",
+          "governor": "13",
+          "governorGloss": "book",
+          "dependent": "14",
+          "dependentGloss": "in"
+        },
+        {
+          "dep": "det",
+          "governor": "18",
+          "governorGloss": "series",
+          "dependent": "15",
+          "dependentGloss": "a"
+        },
+        {
+          "dep": "advmod",
+          "governor": "17",
+          "governorGloss": "popular",
+          "dependent": "16",
+          "dependentGloss": "hugely"
+        },
+        {
+          "dep": "amod",
+          "governor": "18",
+          "governorGloss": "series",
+          "dependent": "17",
+          "dependentGloss": "popular"
+        },
+        {
+          "dep": "pobj",
+          "governor": "14",
+          "governorGloss": "in",
+          "dependent": "18",
+          "dependentGloss": "series"
+        },
+        {
+          "dep": "prep",
+          "governor": "10",
+          "governorGloss": "splitting",
+          "dependent": "19",
+          "dependentGloss": "into"
+        },
+        {
+          "dep": "num",
+          "governor": "22",
+          "governorGloss": "adaptations",
+          "dependent": "20",
+          "dependentGloss": "two"
+        },
+        {
+          "dep": "nn",
+          "governor": "22",
+          "governorGloss": "adaptations",
+          "dependent": "21",
+          "dependentGloss": "film"
+        },
+        {
+          "dep": "pobj",
+          "governor": "19",
+          "governorGloss": "into",
+          "dependent": "22",
+          "dependentGloss": "adaptations"
+        }
+      ],
+      "collapsed-dependencies": [
+        {
+          "dep": "ROOT",
+          "governor": "0",
+          "governorGloss": "ROOT",
+          "dependent": "7",
+          "dependentGloss": "example"
+        },
+        {
+          "dep": "cc",
+          "governor": "7",
+          "governorGloss": "example",
+          "dependent": "1",
+          "dependentGloss": "And"
+        },
+        {
+          "dep": "nsubj",
+          "governor": "7",
+          "governorGloss": "example",
+          "dependent": "2",
+          "dependentGloss": "it"
+        },
+        {
+          "dep": "cop",
+          "governor": "7",
+          "governorGloss": "example",
+          "dependent": "3",
+          "dependentGloss": "\'s"
+        },
+        {
+          "dep": "det",
+          "governor": "7",
+          "governorGloss": "example",
+          "dependent": "4",
+          "dependentGloss": "the"
+        },
+        {
+          "dep": "advmod",
+          "governor": "6",
+          "governorGloss": "shameless",
+          "dependent": "5",
+          "dependentGloss": "most"
+        },
+        {
+          "dep": "amod",
+          "governor": "7",
+          "governorGloss": "example",
+          "dependent": "6",
+          "dependentGloss": "shameless"
+        },
+        {
+          "dep": "advmod",
+          "governor": "7",
+          "governorGloss": "example",
+          "dependent": "8",
+          "dependentGloss": "yet"
+        },
+        {
+          "dep": "prepc_of",
+          "governor": "7",
+          "governorGloss": "example",
+          "dependent": "10",
+          "dependentGloss": "splitting"
+        },
+        {
+          "dep": "det",
+          "governor": "13",
+          "governorGloss": "book",
+          "dependent": "11",
+          "dependentGloss": "the"
+        },
+        {
+          "dep": "amod",
+          "governor": "13",
+          "governorGloss": "book",
+          "dependent": "12",
+          "dependentGloss": "final"
+        },
+        {
+          "dep": "dobj",
+          "governor": "10",
+          "governorGloss": "splitting",
+          "dependent": "13",
+          "dependentGloss": "book"
+        },
+        {
+          "dep": "det",
+          "governor": "18",
+          "governorGloss": "series",
+          "dependent": "15",
+          "dependentGloss": "a"
+        },
+        {
+          "dep": "advmod",
+          "governor": "17",
+          "governorGloss": "popular",
+          "dependent": "16",
+          "dependentGloss": "hugely"
+        },
+        {
+          "dep": "amod",
+          "governor": "18",
+          "governorGloss": "series",
+          "dependent": "17",
+          "dependentGloss": "popular"
+        },
+        {
+          "dep": "prep_in",
+          "governor": "13",
+          "governorGloss": "book",
+          "dependent": "18",
+          "dependentGloss": "series"
+        },
+        {
+          "dep": "num",
+          "governor": "22",
+          "governorGloss": "adaptations",
+          "dependent": "20",
+          "dependentGloss": "two"
+        },
+        {
+          "dep": "nn",
+          "governor": "22",
+          "governorGloss": "adaptations",
+          "dependent": "21",
+          "dependentGloss": "film"
+        },
+        {
+          "dep": "prep_into",
+          "governor": "10",
+          "governorGloss": "splitting",
+          "dependent": "22",
+          "dependentGloss": "adaptations"
+        }
+      ],
+      "collapsed-ccprocessed-dependencies": [
+        {
+          "dep": "ROOT",
+          "governor": "0",
+          "governorGloss": "ROOT",
+          "dependent": "7",
+          "dependentGloss": "example"
+        },
+        {
+          "dep": "cc",
+          "governor": "7",
+          "governorGloss": "example",
+          "dependent": "1",
+          "dependentGloss": "And"
+        },
+        {
+          "dep": "nsubj",
+          "governor": "7",
+          "governorGloss": "example",
+          "dependent": "2",
+          "dependentGloss": "it"
+        },
+        {
+          "dep": "cop",
+          "governor": "7",
+          "governorGloss": "example",
+          "dependent": "3",
+          "dependentGloss": "\'s"
+        },
+        {
+          "dep": "det",
+          "governor": "7",
+          "governorGloss": "example",
+          "dependent": "4",
+          "dependentGloss": "the"
+        },
+        {
+          "dep": "advmod",
+          "governor": "6",
+          "governorGloss": "shameless",
+          "dependent": "5",
+          "dependentGloss": "most"
+        },
+        {
+          "dep": "amod",
+          "governor": "7",
+          "governorGloss": "example",
+          "dependent": "6",
+          "dependentGloss": "shameless"
+        },
+        {
+          "dep": "advmod",
+          "governor": "7",
+          "governorGloss": "example",
+          "dependent": "8",
+          "dependentGloss": "yet"
+        },
+        {
+          "dep": "prepc_of",
+          "governor": "7",
+          "governorGloss": "example",
+          "dependent": "10",
+          "dependentGloss": "splitting"
+        },
+        {
+          "dep": "det",
+          "governor": "13",
+          "governorGloss": "book",
+          "dependent": "11",
+          "dependentGloss": "the"
+        },
+        {
+          "dep": "amod",
+          "governor": "13",
+          "governorGloss": "book",
+          "dependent": "12",
+          "dependentGloss": "final"
+        },
+        {
+          "dep": "dobj",
+          "governor": "10",
+          "governorGloss": "splitting",
+          "dependent": "13",
+          "dependentGloss": "book"
+        },
+        {
+          "dep": "det",
+          "governor": "18",
+          "governorGloss": "series",
+          "dependent": "15",
+          "dependentGloss": "a"
+        },
+        {
+          "dep": "advmod",
+          "governor": "17",
+          "governorGloss": "popular",
+          "dependent": "16",
+          "dependentGloss": "hugely"
+        },
+        {
+          "dep": "amod",
+          "governor": "18",
+          "governorGloss": "series",
+          "dependent": "17",
+          "dependentGloss": "popular"
+        },
+        {
+          "dep": "prep_in",
+          "governor": "13",
+          "governorGloss": "book",
+          "dependent": "18",
+          "dependentGloss": "series"
+        },
+        {
+          "dep": "num",
+          "governor": "22",
+          "governorGloss": "adaptations",
+          "dependent": "20",
+          "dependentGloss": "two"
+        },
+        {
+          "dep": "nn",
+          "governor": "22",
+          "governorGloss": "adaptations",
+          "dependent": "21",
+          "dependentGloss": "film"
+        },
+        {
+          "dep": "prep_into",
+          "governor": "10",
+          "governorGloss": "splitting",
+          "dependent": "22",
+          "dependentGloss": "adaptations"
+        }
+      ],
+      "tokens": [
+        {
+          "index": "-1",
+          "word": "It",
+          "characterOffsetBegin": "0",
+          "characterOffsetEnd": "2",
+          "pos": "PRP"
+        },
+        {
+          "index": "-1",
+          "word": "\'s",
+          "characterOffsetBegin": "2",
+          "characterOffsetEnd": "4",
+          "pos": "VBZ"
+        },
+        {
+          "index": "-1",
+          "word": "an",
+          "characterOffsetBegin": "5",
+          "characterOffsetEnd": "7",
+          "pos": "DT"
+        },
+        {
+          "index": "-1",
+          "word": "elaborate",
+          "characterOffsetBegin": "8",
+          "characterOffsetEnd": "17",
+          "pos": "JJ"
+        },
+        {
+          "index": "-1",
+          "word": "game",
+          "characterOffsetBegin": "18",
+          "characterOffsetEnd": "22",
+          "pos": "NN"
+        },
+        {
+          "index": "-1",
+          "word": "of",
+          "characterOffsetBegin": "23",
+          "characterOffsetEnd": "25",
+          "pos": "IN"
+        },
+        {
+          "index": "-1",
+          "word": "hurry-up-and-wait",
+          "characterOffsetBegin": "26",
+          "characterOffsetEnd": "43",
+          "pos": "NN"
+        },
+        {
+          "index": "-1",
+          "word": ".",
+          "characterOffsetBegin": "43",
+          "characterOffsetEnd": "44",
+          "pos": "."
+        },
+        {
+          "index": "-1",
+          "word": "And",
+          "characterOffsetBegin": "45",
+          "characterOffsetEnd": "48",
+          "pos": "CC"
+        },
+        {
+          "index": "-1",
+          "word": "it",
+          "characterOffsetBegin": "49",
+          "characterOffsetEnd": "51",
+          "pos": "PRP"
+        },
+        {
+          "index": "-1",
+          "word": "\'s",
+          "characterOffsetBegin": "51",
+          "characterOffsetEnd": "53",
+          "pos": "VBZ"
+        },
+        {
+          "index": "-1",
+          "word": "the",
+          "characterOffsetBegin": "54",
+          "characterOffsetEnd": "57",
+          "pos": "DT"
+        },
+        {
+          "index": "-1",
+          "word": "most",
+          "characterOffsetBegin": "58",
+          "characterOffsetEnd": "62",
+          "pos": "RBS"
+        },
+        {
+          "index": "-1",
+          "word": "shameless",
+          "characterOffsetBegin": "63",
+          "characterOffsetEnd": "72",
+          "pos": "JJ"
+        },
+        {
+          "index": "-1",
+          "word": "example",
+          "characterOffsetBegin": "73",
+          "characterOffsetEnd": "80",
+          "pos": "NN"
+        },
+        {
+          "index": "-1",
+          "word": "yet",
+          "characterOffsetBegin": "81",
+          "characterOffsetEnd": "84",
+          "pos": "RB"
+        },
+        {
+          "index": "-1",
+          "word": "of",
+          "characterOffsetBegin": "85",
+          "characterOffsetEnd": "87",
+          "pos": "IN"
+        },
+        {
+          "index": "-1",
+          "word": "splitting",
+          "characterOffsetBegin": "88",
+          "characterOffsetEnd": "97",
+          "pos": "VBG"
+        },
+        {
+          "index": "-1",
+          "word": "the",
+          "characterOffsetBegin": "98",
+          "characterOffsetEnd": "101",
+          "pos": "DT"
+        },
+        {
+          "index": "-1",
+          "word": "final",
+          "characterOffsetBegin": "102",
+          "characterOffsetEnd": "107",
+          "pos": "JJ"
+        },
+        {
+          "index": "-1",
+          "word": "book",
+          "characterOffsetBegin": "108",
+          "characterOffsetEnd": "112",
+          "pos": "NN"
+        },
+        {
+          "index": "-1",
+          "word": "in",
+          "characterOffsetBegin": "113",
+          "characterOffsetEnd": "115",
+          "pos": "IN"
+        },
+        {
+          "index": "-1",
+          "word": "a",
+          "characterOffsetBegin": "116",
+          "characterOffsetEnd": "117",
+          "pos": "DT"
+        },
+        {
+          "index": "-1",
+          "word": "hugely",
+          "characterOffsetBegin": "118",
+          "characterOffsetEnd": "124",
+          "pos": "RB"
+        },
+        {
+          "index": "-1",
+          "word": "popular",
+          "characterOffsetBegin": "125",
+          "characterOffsetEnd": "132",
+          "pos": "JJ"
+        },
+        {
+          "index": "-1",
+          "word": "series",
+          "characterOffsetBegin": "133",
+          "characterOffsetEnd": "139",
+          "pos": "NN"
+        },
+        {
+          "index": "-1",
+          "word": "into",
+          "characterOffsetBegin": "140",
+          "characterOffsetEnd": "144",
+          "pos": "IN"
+        },
+        {
+          "index": "-1",
+          "word": "two",
+          "characterOffsetBegin": "145",
+          "characterOffsetEnd": "148",
+          "pos": "CD"
+        },
+        {
+          "index": "-1",
+          "word": "film",
+          "characterOffsetBegin": "149",
+          "characterOffsetEnd": "153",
+          "pos": "NN"
+        },
+        {
+          "index": "-1",
+          "word": "adaptations",
+          "characterOffsetBegin": "154",
+          "characterOffsetEnd": "165",
+          "pos": "NNS"
+        },
+        {
+          "index": "-1",
+          "word": ".",
+          "characterOffsetBegin": "165",
+          "characterOffsetEnd": "166",
+          "pos": "."
+        }
+      ]
+    }
+  ]
+}
