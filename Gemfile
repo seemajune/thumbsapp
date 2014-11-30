@@ -4,7 +4,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
+gem 'activerecord-jdbcsqlite3-adapter'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -14,8 +15,8 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 gem 'pry'
-gem 'better_errors'
-gem 'binding_of_caller'
+#gem 'better_errors'
+gem 'binding_of_caller', '0.7.3.pre1'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -33,6 +34,9 @@ gem 'stanford-core-nlp'
 gem 'badfruit'
 
 gem 'chartkick'
+ruby '2.0.0', :engine => 'jruby', :engine_version => '1.7.16'
+#gem 'puma'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

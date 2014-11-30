@@ -10,6 +10,7 @@ class Sentiment < ActiveRecord::Base
     @values = []
     @text.get(:sentences).each do |sentence|
       tree = StanfordCoreNLP::RNNCoreAnnotations
+      binding.pry
       #get actual sentiment values
       @values << tree.getPredictedClass(sentence.get:annotated_tree)
       #get sentiment labels

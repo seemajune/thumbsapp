@@ -10,6 +10,11 @@ default: &default
   timeout: 5000
 
 development:
+  adapter: jdbcsqlite3
+  database: db/development.sqlite3
+  timeout: 5000
+
+development:
   <<: *default
   database: db/development.sqlite3
 
