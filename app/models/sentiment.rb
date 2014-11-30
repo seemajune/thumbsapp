@@ -13,14 +13,17 @@ class Sentiment < ActiveRecord::Base
     @text.get(:sentences).each do |sentence|
       tree = StanfordCoreNLP::RNNCoreAnnotations
       @children = StanfordCoreNLP::RNNCoreAnnotations
-      #new
-      # binding.pry
+
       #get actual sentiment values
       @values << tree.getPredictedClass(sentence.get:annotated_tree)
-      node_tree = sentence.get:annotated_tree
-      nodes = node_tree.post_order_node_list.to_a.reverse
       #get sentiment labels
       puts sentence.get(:class_name).to_s
+
+      #create json from tree nodes
+      node_tree = sentence.get:annotated_tree
+      nodes = node_tree.post_order_node_list.to_a.reverse
+      get_json(nodes)
+
     end
     results
   end
@@ -54,7 +57,6 @@ class Sentiment < ActiveRecord::Base
 
         # if @children == []
         #   json_string <<"children: ["
-
         #   json_string <<" ]}\n" if @children == []
         #   getJson(@children) if @children != []
       end
