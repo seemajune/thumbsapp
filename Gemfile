@@ -31,7 +31,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'stanford-core-nlp'
 gem 'badfruit'
-gem 'treat'
+#gem 'treat'
 gem 'chartkick'
 ruby '2.0.0', :engine => 'jruby', :engine_version => '1.7.16'
 

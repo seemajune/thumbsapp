@@ -1,20 +1,21 @@
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 
 <div class="container-fluid row white-bg">
-    <div id="sentiment">
-      <%= pie_chart @movie.sentiments.group(:score).having("count(score) > 0").count %>
-    </div>
-  <div class="movies-show-bg span12"><h2 class="movie-title-h2 text-center"><%= @movie.title %></h2>
-  <div class="border-movies">
-  <% @reviews.each do |review| %>
-  <ul class="bullet-less">
-      <li><%= review.quote %></li>
 
-    <ul>
-      <li>Sentiment value: <%= review.sentiment.score.to_f %></li>
+  <div class="movies-show-bg span12"><h2 style="padding-bottom:0;margin:0;background: #a5d2da;color:#FFFD0D;text-align:center" class="movie-title-h2 text-center">
+      <%= @movie.title %></h2>
+    <div id="sentiment">
+      <%= pie_chart @movie.sentiments.group(:score).having("count(score) > 0").count, library: {backgroundColor: "#a5d2da"} %>
+    </div>
+  <div class="border-movies" style="background:#3b3b3b">
+    <ul style="color:#fff;font-size:20px;">
+
+    <% @reviews.each do |review| %>
+      <li class="bullet-less" style="line-height:30px;"><%= review.quote %></li>
+      <li style="margin-left:65px; line-height:60px; margin-top:-15px;">Sentiment value: <%= "#{review.sentiment.score.to_f.round(2)+1.0}" %></li>
+    <% end %>
+
     </ul>
-  </ul>
-     <% end %>
     </div>
   </div>
 </div>

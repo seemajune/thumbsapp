@@ -41,7 +41,6 @@ GEM
     bind-it (0.2.7-java)
     binding_of_caller (0.7.3.pre1)
       debug_inspector (>= 0.0.1)
-    birch (0.0.8-java)
     builder (3.2.2)
     chartkick (1.3.2)
     coderay (1.1.0)
@@ -79,7 +78,6 @@ GEM
     multi_json (1.10.1)
     multi_xml (0.5.5)
     polyglot (0.3.5)
-    progressbar (0.21.0)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -111,16 +109,12 @@ GEM
     rdoc (4.1.2)
       json (~> 1.4)
     rjb (1.4.9)
-    rubyzip (0.9.9)
     sass (3.2.19)
     sass-rails (4.0.5)
       railties (>= 4.0.0, < 5.0)
       sass (~> 3.2.2)
       sprockets (~> 2.8, < 3.0)
       sprockets-rails (~> 2.0)
-    schiphol (1.0.1)
-      progressbar (>= 0.10.0)
-      rubyzip (~> 0.9.9)
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
@@ -143,10 +137,6 @@ GEM
     thread_safe (0.3.4)
     thread_safe (0.3.4-java)
     tilt (1.4.1)
-    treat (2.1.0)
-      birch
-      schiphol
-      yomu
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
@@ -157,9 +147,6 @@ GEM
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    yomu (0.2.0)
-      json (~> 1.8)
-      mime-types (~> 1.23)
 
 PLATFORMS
   java
@@ -179,6 +166,5 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   spring
   stanford-core-nlp
-  treat
   turbolinks
   uglifier (>= 1.3.0)
