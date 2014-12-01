@@ -42,6 +42,41 @@ class Sentiment < ActiveRecord::Base
   end
 
   def get_json(nodes)
+    puts "Start get_json"
+    file_name = "json.txt"
+    json_string = ''
+    json_string << obj_to_json(nodes)
+    puts ", json_string: "
+    puts json_string
+    
+    file = File.open(file_name, "w+"){|file| file.puts json_string}
+    # puts json_string
+    #file.close
+    
+  end
+
+  def obj_to_json(nodes)
+    json_string = ''
+    comma = '';
+    #binding.pry
+    nodes.each_with_index do |node, index|
+      json_string << comma
+      json_string << "{'name': '#{node.to_s}'"
+      
+      json_string << ",'children':["
+      if has_children?(node)
+        json_string << obj_to_json( node.get_children_as_list.to_a.reverse )
+      end
+      json_string << "]"
+      json_string << "}"
+      
+      comma = ','
+    end
+
+    return json_string
+  end
+
+  def get_json_old(nodes)
     file_name = "json.txt"
     json_string = ''
     #binding.pry
@@ -56,7 +91,7 @@ class Sentiment < ActiveRecord::Base
         json_string << " \n]}\n"
 
         # if @children == []
-        #   json_string <<"children: ["
+        #   json_string <<"childrsen: ["
         #   json_string <<" ]}\n" if @children == []
         #   getJson(@children) if @children != []
       end
