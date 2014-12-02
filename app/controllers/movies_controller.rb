@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
-  
+
   def index
     Movie.find_or_create_movies
     @movies = Movie.all

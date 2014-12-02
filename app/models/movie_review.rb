@@ -8,7 +8,7 @@ class MovieReview < ActiveRecord::Base
 
   def create_sentiment
     self.build_sentiment
-    sentiment.score = sentiment.get_sentiment(self.quote)
+    sentiment.score = sentiment.get_sentiment
     sentiment.save
   end
 end

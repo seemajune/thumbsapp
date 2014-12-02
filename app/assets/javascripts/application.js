@@ -10,8 +10,6 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-
-
 //= require jquery
 //= require jquery_ujs
 //= require default
@@ -19,4 +17,5 @@
 //= require jquery.easing.1.3
 //= require jquery.scrollTo-1.4.3.1-min
 //= require turbolinks
+//= require sentiment_tree
 

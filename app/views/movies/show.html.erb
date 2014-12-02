@@ -1,4 +1,3 @@
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 
 <div class="container-fluid row white-bg">
 
@@ -13,10 +12,15 @@
     <% @reviews.each do |review| %>
       <li class="bullet-less" style="line-height:30px;"><%= review.quote %></li>
       <li style="margin-left:65px; line-height:60px; margin-top:-15px;">Sentiment value: <%= "#{review.sentiment.score.to_f.round(2)+1.0}" %></li>
+       <li class="bullet-less"><div id=<%= "sentiment-tree#{review.id}" %>></div></li>
+    <%= javascript_tag do %>
+    renderTree("<%= movie_movie_review_sentiment_path(@movie.id, review.id, review.sentiment.id, format: :json) %>",
+      '<%= "#sentiment-tree#{review.id}" %>');
+    <% end %>
     <% end %>
 
     </ul>
     </div>
   </div>
 </div>
-
+<%= render 'layouts/footer' %>

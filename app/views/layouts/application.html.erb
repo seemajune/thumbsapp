@@ -5,12 +5,14 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag "http://www.google.com/jsapi", "chartkick" %>
+  <%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js" %>
+  <%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.3/d3-tip.min.js" %>
 
   <%= csrf_meta_tags %>
+
 </head>
 <body>
-<%= render 'layouts/header'  %>
-<%= yield %>
-<%= render 'layouts/footer' %>
+<%= render 'layouts/header' %>
+  <%= yield %>
 </body>
 </html>
