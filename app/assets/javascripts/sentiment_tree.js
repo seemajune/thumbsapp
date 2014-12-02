@@ -89,6 +89,7 @@ function renderTree(json_url, sel) {
   }
   
   var suggestScore = function() {
+    debugger;
       alert("show suggestion form");
   }
 
@@ -113,7 +114,7 @@ function renderTree(json_url, sel) {
       .attr("dx", -3)
       .attr("dy", 3)
       .text(function(d){return d.score;})
-            .on("mouseover", phraseTooltip)
+      .on("mouseover", phraseTooltip)
       .on("mouseout", tip.hide);
 
 
