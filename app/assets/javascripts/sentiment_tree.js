@@ -4,15 +4,17 @@ colorCodes = ["#FF0000",
         "#7FFF00",
         "#00FF00"]; 
 
+var globalNode;
+
 function renderTree(json_url, sel) {
     var m = [20, 120, 20, 120],
-  w = 2800 - m[1] - m[3],
-  h = 2000 - m[0] - m[2],
+  w = 1400 - m[1] - m[3],
+  h = 1200, //;,2000 - m[0] - m[2],
   i = 0,
   root;
 
     var tree = d3.layout.tree()
-  .size([h, w]);
+  .size([h,w]);
 
     var diagonal = d3.svg.diagonal()
   .projection(function(d) { return [d.x, d.y]; });
@@ -33,10 +35,21 @@ function renderTree(json_url, sel) {
 
     vis.call(tip)
 
+var depthCount = function (branch) {
+    if (!branch.children) {
+        return 1;
+    }
+    return 1 + d3.max(branch.children.map(depthCount));
+ }
+    
     d3.json(json_url, function(json) {
-  root = json;
+  console.log(json);
 
-  root.x0 = h / 2;
+
+  root = json;
+  $(sel).height(depthCount(root) * 45);
+
+  root.x0 = 0;
   root.y0 = 0;
 
   function toggleAll(d) {
@@ -61,7 +74,7 @@ function renderTree(json_url, sel) {
   var nodes = tree.nodes(root).reverse();
 
   // Normalize for fixed-depth.
-  nodes.forEach(function(d) { d.y = d.depth * 25; });
+  nodes.forEach(function(d) { d.y = d.depth * 40; });
 
   // Update the nodes
   var node = vis.selectAll("g.node")
@@ -88,9 +101,92 @@ function renderTree(json_url, sel) {
       tip.show(circle);
   }
   
-  var suggestScore = function() {
-    debugger;
-      alert("show suggestion form");
+  var suggestScore = function(d) {
+    var popUp = d3.select(this.parentElement).append("svg:g").attr("id", "#popup")
+
+    popUp.append("svg:rect").attr("width", "200")
+    .attr("height", "240")
+    .style("fill", "#fff")
+    .attr("rx","15")
+    .attr("ry","15")
+    .style("stroke", "#000")
+    .style("stroke-width", "2");
+
+    popUp.append("text").attr("dx", "20")
+    .attr("dy", "30")
+    .text("Select the correct value:")
+    .style("fill", "#ff0000")
+    .style("font-size", "15px");
+
+    popUp.append("svg:circle").attr("r", 10).style("fill", "#FF0000")
+    .attr("cx", 50)
+    .attr("cy", 70);
+
+    popUp.append("text").attr("dx", "65")
+    .attr("dy", "74")
+    .text("very negative")
+    .style("fill", "#000")
+    .style("font-size", "15px")
+
+    popUp.append("svg:circle").attr("r", 10).style("fill", "#FF7F00")
+    .attr("cx", 50)
+    .attr("cy", 95);
+
+    popUp.append("text").attr("dx", "65")
+    .attr("dy", "99")
+    .text("negative")
+    .style("fill", "#000")
+    .style("font-size", "15px")
+
+    popUp.append("svg:circle").attr("r", 10).style("fill", "#FFFF00")
+    .attr("cx", 50)
+    .attr("cy", 120);
+
+     popUp.append("text").attr("dx", "65")
+    .attr("dy", "124")
+    .text("neutral")
+    .style("fill", "#000")
+    .style("font-size", "15px")
+
+    popUp.append("svg:circle").attr("r", 10).style("fill", "#7FFF00")
+    .attr("cx", 50)
+    .attr("cy", 145);
+
+    popUp.append("text").attr("dx", "65")
+    .attr("dy", "149")
+    .text("positive")
+    .style("fill", "#000")
+    .style("font-size", "15px")
+
+    popUp.append("svg:circle").attr("r", 10).style("fill", "#00FF00")
+    .attr("cx", 50)
+    .attr("cy", 170);
+
+    popUp.append("text").attr("dx", "65")
+    .attr("dy", "174")
+    .text("very positive")
+    .style("fill", "#000")
+    .style("font-size", "15px");
+
+    popUp.append("svg:rect").attr("width", "100")
+    .attr("height", "30")
+    .style("fill", "#3b3b3b")
+    .attr("rx","5")
+    .attr("ry","5")
+    .style("stroke", "#000")
+    .style("stroke-width", "2")
+    .attr("x", 50)
+    .attr("y", 200)
+    .on("click", function() { this.parentElement.remove();});
+
+    popUp.append("text").attr("dx", "77")
+    .attr("dy", "220")
+    .text("Dismiss")
+    .style("fill", "#fff")
+    .style("font-size", "15px");
+
+
+
   }
 
   nodeEnter.append("svg:circle")
@@ -98,7 +194,7 @@ function renderTree(json_url, sel) {
       .style("fill", function(d) { return colorCodes[d.score]; })
       .on("mouseover", phraseTooltip)
       .on("mouseout", tip.hide)
-      .on("click", suggestScore);
+      .on("dblclick", suggestScore);
 
 
   nodeEnter.append("svg:text")
@@ -114,6 +210,8 @@ function renderTree(json_url, sel) {
       .attr("dx", -3)
       .attr("dy", 3)
       .text(function(d){return d.score;})
+      .style("fill", "#000")
+
       .on("mouseover", phraseTooltip)
       .on("mouseout", tip.hide);
 

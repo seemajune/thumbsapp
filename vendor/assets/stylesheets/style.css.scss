@@ -4,7 +4,7 @@
 
 body{ background:#a5d2da; padding:0; color: #454545; font-family: "Quicksand";}
 a,a:hover{text-decoration:none; color:#FE5214}
-h2,h3{color:#FE5214; text-rendering: optimizelegibility; }
+h2,h3{color:#ff0000; text-rendering: optimizelegibility; }
 h1{padding:0px; font-weight: 200;font-size: 32px;color: #3f3f3f;margin: 0;font-family: "Quicksand";text-rendering: optimizelegibility;}
 .debug{ border:1px solid #FFCC33;}
 h1.brand {
@@ -41,21 +41,23 @@ h1.brand {
 .movie-title-h2 {
   font-family: "Quicksand";
   font-weight: bolder;
-  color: #6cdbc2;
+  /*color: #6cdbc2;*/
   padding-bottom: 10%;
   font-size: 4em;
   line-height: 1.5em;
 }
 
-
 .border-movies {
     border: 1px solid #555;
     border-radius: 10px;
-    padding: 10%;
+    padding: 10%; 
     padding-bottom: 15%;
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    overflow:auto;
     height: 300px;
     width: 100%;
+    width: 1040px;
 }
 
 .bullet-less {
@@ -67,7 +69,7 @@ h1.brand {
 }
 .span3.logo a {
   font-family: 'The Girl Next Door', cursive;
-  color: #FFFD0D;
+  /*color: #FFFD0D;*/
   font-size: 3em;
   text-align: center;
 

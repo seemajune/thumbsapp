@@ -3,24 +3,28 @@
 
   <div class="movies-show-bg span12">
     <div style="width:1020px">
-      <h2 style="padding-bottom:0;margin:0;background: #a5d2da;color:#FFFD0D;text-align:center; float:left; width:70%; margin-left: -20px;" class="movie-title-h2 text-center">
+      <h2 style="padding-bottom:0;margin:0;background: #a5d2da; text-align:center; float:left; width:70%; margin-left: -20px;" class="movie-title-h2 text-center">
       <%= @movie.title %></h2>
   
       <div id="sentiment" style="display:inline-block; float:right; margin-right:-180px; margin-top:-50px">
         <%= pie_chart @movie.sentiments.group(:score).having("count(score) > 0").count, library: {backgroundColor: "#a5d2da", width: "500"}, height:"300px" %>
       </div>
-    <div>
+    </div>
+
   <div class="border-movies" style="background:#3b3b3b">
     <ul style="color:#fff;font-size:20px;">
 
     <% @reviews.each do |review| %>
      <li style="margin-left:65px; line-height:60px; margin-top:-15px;">Sentiment value: <%= "#{review.sentiment.score.to_f.round(2)+1.0}" %></li>
       <li class="bullet-less" style="line-height:30px;"><%= review.quote %></li>
-      <li class="bullet-less"><div id=<%= "sentiment-tree#{review.id}" %>></div></li>
-      <%= javascript_tag do %>
-        renderTree("<%= movie_movie_review_sentiment_path(@movie.id, review.id, review.sentiment.id, format: :json) %>",
-      '<%= "#sentiment-tree#{review.id}" %>');
-      <% end %>
+      <li class="bullet-less">
+        <div id=<%= "sentiment-tree#{review.id}" %>>
+          <%= javascript_tag do %>
+            renderTree("<%= movie_movie_review_sentiment_path(@movie.id, review.id, review.sentiment.id, format: :json) %>",
+          '<%= "#sentiment-tree#{review.id}" %>');
+          <% end %>
+        </div>
+      </li>
     <% end %>
 
     </ul>

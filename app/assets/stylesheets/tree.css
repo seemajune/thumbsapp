@@ -7,8 +7,8 @@
 
 .node text {
   font-size: 12px;
-   font-family: sans-serif;
-   color: #fff;
+  font-family: sans-serif;
+  fill: #fff;
 }
 
 path.link {
