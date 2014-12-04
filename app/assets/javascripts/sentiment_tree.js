@@ -100,6 +100,12 @@ var depthCount = function (branch) {
       
       tip.show(circle);
   }
+
+  // var updateScore = function(d){
+  //   collectPhrase(this.parentNode)
+  //   debugger;
+
+  // }
   
   var suggestScore = function(d) {
     var popUp = d3.select(this.parentElement).append("svg:g").attr("id", "#popup")
@@ -120,13 +126,16 @@ var depthCount = function (branch) {
 
     popUp.append("svg:circle").attr("r", 10).style("fill", "#FF0000")
     .attr("cx", 50)
-    .attr("cy", 70);
+    .attr("cy", 70)
+    .on("click", updateScore);
 
     popUp.append("text").attr("dx", "65")
     .attr("dy", "74")
     .text("very negative")
     .style("fill", "#000")
     .style("font-size", "15px")
+  //  .on("click", updateScore);
+
 
     popUp.append("svg:circle").attr("r", 10).style("fill", "#FF7F00")
     .attr("cx", 50)
