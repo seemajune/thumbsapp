@@ -1,7 +1,7 @@
 thumbsapp
 =========
 
-thumbsapp is a natural language processing application that predicts the sentiment of movie reviews on a 5 point scale, using the Stanford CoreNLP.
+thumbsapp is a natural language processing and machine learning application that predicts the sentiment of movie reviews on a 5 point scale, using the Stanford CoreNLP.
 
 The sentiment results are displayed in an interactive graphical tree hierarchy, where users can click once to toggle/collapse subtrees. Users can double click and are prompted to information to update the sentiment value of any particular node. The new value gets submitted back to our model with is repeatedly trained with the new data to enhance accuracy.
 
