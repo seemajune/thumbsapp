@@ -127,7 +127,7 @@ var depthCount = function (branch) {
     popUp.append("svg:circle").attr("r", 10).style("fill", "#FF0000")
     .attr("cx", 50)
     .attr("cy", 70)
-    .on("click", updateScore);
+  //  .on("click", updateScore);
 
     popUp.append("text").attr("dx", "65")
     .attr("dy", "74")
@@ -193,8 +193,6 @@ var depthCount = function (branch) {
     .text("Dismiss")
     .style("fill", "#fff")
     .style("font-size", "15px");
-
-
 
   }
 
