@@ -1,6 +1,6 @@
 GIT
-  remote: https://github.com/draisy/stanford-core-nlp.git
-  revision: 5102195d90c411f814e95bfdb469a9a6bb192f9b
+  remote: https://github.com/draisy/stanford-core-nlp2.git
+  revision: 752c2b80014611b2ce28014cde5bd16d65c37419
   specs:
     stanford-core-nlp (0.5.1)
       bind-it (~> 0.2.5)

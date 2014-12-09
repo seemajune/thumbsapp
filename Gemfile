@@ -29,7 +29,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
-gem 'stanford-core-nlp', :git => 'https://github.com/draisy/stanford-core-nlp.git'
+gem 'stanford-core-nlp', :git => 'https://github.com/draisy/stanford-core-nlp2.git'
 gem 'badfruit'
 #gem 'treat'
 gem 'chartkick'
