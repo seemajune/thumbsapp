@@ -14,4 +14,24 @@
  *= require style
  *= require tree
  *= require_tree .
+ *= require_self
  */
+
+.collapse-this-row {
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+.movie-title-container {
+  margin-top: 0px; 
+}
+
+.colors-legend{
+  width: 300px;
+  margin-top:0px;
+  margin-left:20px;
+}
+
+.push-down-chart{
+  margin-top:-150px;
+}

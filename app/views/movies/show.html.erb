@@ -1,22 +1,32 @@
 
-<div class="container-fluid row white-bg">
+<div class="container">
 
-  <div class="movies-show-bg">
-    <div style="width:1020px">
-      <h2 style="padding-bottom:0;margin:0;background: #a5d2da; float:right;/* width:70%; margin-left: -20px;*/" class="movie-title-h2 text-center">
-      <%= @movie.title %></h2>
-  
-      <div id="sentiment" style="display:inline-block; float:right; margin-right:-400px; margin-top:150px">
-        <%= pie_chart @movie.sentiments.group(:score).having("count(score) > 0").count, library: {backgroundColor: "#a5d2da", width: "500"}, height:"300px" %>
+  <div class="row collapse-this-row">
+    <div class="span3 offset2">
+      <div class="push-image">
+        <%=  image_tag(@movie.poster, class: "img-rounded movie-display") %>
       </div>
     </div>
-    <div>
+    <div class="span4 offset4">
+      <div class="movie-title-container">
+        <h2 padding-bottom:0;margin:0;background: #a5d2da;  class="movie-title-h2 text-center"><%= @movie.title %><h2>
+      </div>
+    </div>
+  </div>
 
+  <div class="row">
+    <div class="span4 offset1">
+      <div class="push-down-legend">
+        <%= image_tag "colors-legend.png", class: "colors-legend" %>
+      </div>
     </div>
-    <div style="margin-top:300px; margin-bottom:10px">
-    <%=  image_tag(@movie.poster, class: "img-rounded movie-display") %>
-    <%= image_tag "colors-legend.png", class: "colors-legend" %>
-    </div>
+    <div class="span3 offset3">
+       <div class="push-down-chart">
+        <%= pie_chart @movie.sentiments.group(:score).having("count(score) > 0").count, library: {backgroundColor: "#a5d2da", width: "500"}, height:"300px" %>
+      </div>
+    </div> 
+  </div>
+
   <div class="border-movies" style="background:#3b3b3b">
     <ul style="color:#fff;font-size:20px;">
 
