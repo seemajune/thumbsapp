@@ -1,21 +1,27 @@
 
 <div class="container-fluid row white-bg">
 
-  <div class="movies-show-bg span12">
+  <div class="movies-show-bg">
     <div style="width:1020px">
-      <h2 style="padding-bottom:0;margin:0;background: #a5d2da; text-align:center; float:left; width:70%; margin-left: -20px;" class="movie-title-h2 text-center">
+      <h2 style="padding-bottom:0;margin:0;background: #a5d2da; float:right;/* width:70%; margin-left: -20px;*/" class="movie-title-h2 text-center">
       <%= @movie.title %></h2>
   
-      <div id="sentiment" style="display:inline-block; float:right; margin-right:-180px; margin-top:-50px">
+      <div id="sentiment" style="display:inline-block; float:right; margin-right:-400px; margin-top:150px">
         <%= pie_chart @movie.sentiments.group(:score).having("count(score) > 0").count, library: {backgroundColor: "#a5d2da", width: "500"}, height:"300px" %>
       </div>
     </div>
+    <div>
 
+    </div>
+    <div style="margin-top:300px; margin-bottom:10px">
+    <%=  image_tag(@movie.poster, class: "img-rounded movie-display") %>
+    <%= image_tag "colors-legend.png", class: "colors-legend" %>
+    </div>
   <div class="border-movies" style="background:#3b3b3b">
     <ul style="color:#fff;font-size:20px;">
 
     <% @reviews.each do |review| %>
-     <li style="margin-left:65px; line-height:60px; margin-top:-15px;">Sentiment value: <%= "#{review.sentiment.score.to_f.round(2)+1.0}" %></li>
+     <li style="margin-left:65px; line-height:60px; margin-top:-15px;">Sentiment value: <%= "#{review.sentiment.score.to_f.round(2)}" %></li>
       <li class="bullet-less" style="line-height:30px;"><%= review.quote %></li>
       <li class="bullet-less">
         <div id=<%= "sentiment-tree#{review.id}" %>>

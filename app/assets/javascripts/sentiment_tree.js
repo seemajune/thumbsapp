@@ -47,7 +47,9 @@ var depthCount = function (branch) {
 
 
   root = json;
-  $(sel).height(depthCount(root) * 45);
+  //set total height of tree
+ // $(sel).height(depthCount(root) * 45);
+ $(sel).height(depthCount(root) * 70);
 
   root.x0 = 0;
   root.y0 = 0;
@@ -73,8 +75,8 @@ var depthCount = function (branch) {
   // Compute the new tree layout.
   var nodes = tree.nodes(root).reverse();
 
-  // Normalize for fixed-depth.
-  nodes.forEach(function(d) { d.y = d.depth * 40; });
+  // Normalize for fixed-depth. changes height between nodes
+  nodes.forEach(function(d) { d.y = d.depth * 60; });
 
   // Update the nodes
   var node = vis.selectAll("g.node")
@@ -197,7 +199,8 @@ var depthCount = function (branch) {
   }
 
   nodeEnter.append("svg:circle")
-      .attr("r", 1e-7)
+     // .attr("r", 1e-7)
+      .attr("r", 20)
       .style("fill", function(d) { return colorCodes[d.score]; })
       .on("mouseover", phraseTooltip)
       .on("mouseout", tip.hide)
@@ -231,7 +234,8 @@ var depthCount = function (branch) {
 
   
   nodeUpdate.select("circle")
-      .attr("r", 10)
+      //.attr("r", 10)
+      .attr("r", 20)
       .style("fill", function(d) { return colorCodes[d.score]; });
 
   
@@ -245,7 +249,8 @@ var depthCount = function (branch) {
       .remove();
 
   nodeExit.select("circle")
-      .attr("r", 1e-6);
+      //.attr("r", 1e-6);
+        .attr("r", 20)
 
   nodeExit.select("text")
       .style("fill-opacity", 1e-6);

@@ -75,6 +75,10 @@ h1.brand {
 
 }
 
+.movie-display{
+  border: 4px solid #ff0000;
+}
+
 .clr{clear:both}
 .cntr{text-align:center}
 .navbar{margin-bottom:-1px; margin-top:28px; position:relative }
@@ -211,6 +215,12 @@ h1.brand {
     font-size: 19px;
     line-height: 27px;
   margin: 15px 0;
+}
+
+.colors-legend{
+  width: 30%;
+  margin-top:70px;
+  margin-left:20px;
 }
 
 
