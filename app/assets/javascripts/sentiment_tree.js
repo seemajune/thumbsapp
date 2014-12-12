@@ -2,7 +2,13 @@ colorCodes = ["#FF0000",
         "#FF7F00",
         "#FFFF00",
         "#7FFF00",
-        "#00FF00"]; 
+        "#00FF00"];
+
+sentimentValues = ["very negative",
+          "negative",
+          "neutral",
+          "positive",
+          "very positive"];         
 
 var globalNode;
 
@@ -126,58 +132,18 @@ var depthCount = function (branch) {
     .style("fill", "#ff0000")
     .style("font-size", "15px");
 
-    popUp.append("svg:circle").attr("r", 10).style("fill", "#FF0000")
+    for (var i = 0; i < 5; i++) {
+     popUp.append("svg:circle").attr("r", 10).style("fill", colorCodes[i])
     .attr("cx", 50)
-    .attr("cy", 70)
+    .attr("cy", 70 + (i * 25))
   //  .on("click", updateScore);
 
     popUp.append("text").attr("dx", "65")
-    .attr("dy", "74")
-    .text("very negative")
+    .attr("dy", 74 + (i * 25))
+    .text(sentimentValues[i])
     .style("fill", "#000")
     .style("font-size", "15px")
-  //  .on("click", updateScore);
-
-
-    popUp.append("svg:circle").attr("r", 10).style("fill", "#FF7F00")
-    .attr("cx", 50)
-    .attr("cy", 95);
-
-    popUp.append("text").attr("dx", "65")
-    .attr("dy", "99")
-    .text("negative")
-    .style("fill", "#000")
-    .style("font-size", "15px")
-
-    popUp.append("svg:circle").attr("r", 10).style("fill", "#FFFF00")
-    .attr("cx", 50)
-    .attr("cy", 120);
-
-     popUp.append("text").attr("dx", "65")
-    .attr("dy", "124")
-    .text("neutral")
-    .style("fill", "#000")
-    .style("font-size", "15px")
-
-    popUp.append("svg:circle").attr("r", 10).style("fill", "#7FFF00")
-    .attr("cx", 50)
-    .attr("cy", 145);
-
-    popUp.append("text").attr("dx", "65")
-    .attr("dy", "149")
-    .text("positive")
-    .style("fill", "#000")
-    .style("font-size", "15px")
-
-    popUp.append("svg:circle").attr("r", 10).style("fill", "#00FF00")
-    .attr("cx", 50)
-    .attr("cy", 170);
-
-    popUp.append("text").attr("dx", "65")
-    .attr("dy", "174")
-    .text("very positive")
-    .style("fill", "#000")
-    .style("font-size", "15px");
+    }
 
     popUp.append("svg:rect").attr("width", "100")
     .attr("height", "30")
