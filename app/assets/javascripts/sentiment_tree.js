@@ -109,11 +109,21 @@ var depthCount = function (branch) {
       tip.show(circle);
   }
 
-  // var updateScore = function(d){
-  //   collectPhrase(this.parentNode)
-  //   debugger;
-
-  // }
+  var updateScore = function(d){
+    var selectedPhrase = collectPhrase(d);
+    var updatedScore = parseInt(this.id.slice(-1));
+            $.ajax({
+                data: { phrase : selectedPhrase, score: updatedScore },
+                type: 'POST',
+                url: '/movies/suggest',
+                success: function () {
+                   alert("success")  
+                },
+                error: function (response) {
+                    alert("error")
+                }
+            });
+  }
   
   var suggestScore = function(d) {
     var popUp = d3.select(this.parentElement).append("svg:g").attr("id", "#popup")
@@ -133,16 +143,17 @@ var depthCount = function (branch) {
     .style("font-size", "15px");
 
     for (var i = 0; i < 5; i++) {
-     popUp.append("svg:circle").attr("r", 10).style("fill", colorCodes[i])
-    .attr("cx", 50)
-    .attr("cy", 70 + (i * 25))
-  //  .on("click", updateScore);
+       popUp.append("svg:circle").attr("r", 10).style("fill", colorCodes[i])
+      .attr("cx", 50)
+      .attr("cy", 70 + (i * 25))
+      .attr("id", "suggest_" + i)
+      .on("click", updateScore);
 
-    popUp.append("text").attr("dx", "65")
-    .attr("dy", 74 + (i * 25))
-    .text(sentimentValues[i])
-    .style("fill", "#000")
-    .style("font-size", "15px")
+      popUp.append("text").attr("dx", "65")
+      .attr("dy", 74 + (i * 25))
+      .text(sentimentValues[i])
+      .style("fill", "#000")
+      .style("font-size", "15px");
     }
 
     popUp.append("svg:rect").attr("width", "100")

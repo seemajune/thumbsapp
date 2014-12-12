@@ -12,6 +12,8 @@ Rails.application.routes.draw do
     end
   end
 
+  post "movies/suggest" => "movies#suggest"
+
   # Example of regular route:
     # get 'movies/:id' => 'movies#show'
 

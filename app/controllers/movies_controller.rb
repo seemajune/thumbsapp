@@ -13,4 +13,13 @@ class MoviesController < ApplicationController
 
   end
 
+def suggest
+  @phrase = params[:phrase]
+  @score = params[:score]
+
+
+
+end
+
+
 end
